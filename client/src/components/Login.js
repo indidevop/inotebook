@@ -7,11 +7,11 @@ const Login = () => {
     const navigate=useNavigate();
     const [creds, setcreds] = useState({ email: "", password: "" })
     const {showAlert,getUser}=useContext(noteContext);
-
+    const host = "https://notebook-backend-52l3.onrender.com";
     
     const submitHandler = async (e) => {
         e.preventDefault();
-        const response = await fetch(`http://localhost:5000/api/auth/login`,
+        const response = await fetch(`${host}/api/auth/login`,
             {
                 method: "POST",
                 headers: {

@@ -14,6 +14,7 @@ router.post('/createUser', [
     body('email', 'Enter valid eamil !').isEmail(),
     body('name', 'Name should not be empty and atleat 3 character long').isLength({ min: 3 }),
     body('password', 'Password should not be empty and atleat 3 character long').isLength({ min: 5 })],
+    
     async (req, res) => {
 
         let success = false;

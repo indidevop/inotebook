@@ -12,6 +12,7 @@ import Signup from './components/Signup';
 function App() {
   
   return (
+    // Empty jsx fragment --> <></>
     <>
       <NoteState>
         <Router>
